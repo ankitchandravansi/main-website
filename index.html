@@ -1,3 +1,5 @@
+<!-- rebuild trigger -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,14 +25,15 @@
         </div>
       </div>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#stay">Find Your Stay</a>
-        <a href="#meals">Healthy Meals</a>
-        <a href="#laundry">Laundry</a>
-        <a href="#extra">Extra Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <nav class="nav-links" id="navLinks">
+  <a href="index.html#home">Home</a>
+  <a href="stay.html">Find Your Stay</a>
+  <a href="meals.html">Healthy Meals</a>
+  <a href="laundry.html">Laundry</a>
+  <a href="index.html#extra">Extra Services</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
+
 
       <div class="nav-actions">
         <a class="btn btn-primary" href="#extra" id="exploreBtn">Explore Now</a>
@@ -71,63 +74,42 @@
     </section>
 
     <!-- CORE SERVICES -->
-     <a href="pg.html">Flats & PGs</a>
-<a href="meals.html">Meal Services</a>
-<a href="laundry.html">Laundry Services</a>
 
-    <section id="stay" class="section services container">
-      <div class="section-head">
-        <h2>Core Services</h2>
-        <p class="muted">Accommodation • Meal Plans • Laundry</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop" alt="pg room">
-          <div class="card-body">
-            <h3>🏠 Find Your Stay</h3>
-            <p class="muted">Verified PGs, flats and hostels with real student reviews and transparent pricing.</p>
-            <div class="card-actions">
-              <button class="tag" data-type="stay" data-title="Find Your Stay">See Options</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=900&auto=format&fit=crop" alt="food">
-          <div class="card-body">
-            <h3>🍱 Healthy Meals</h3>
-            <p class="muted">Daily mess subscriptions, weekly menus and special student combos at budget prices.</p>
-            <div class="card-actions">
-              <button class="tag" data-type="meals" data-title="Healthy Meals">View Menus</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1542736667-069246bdbc75?q=80&w=900&auto=format&fit=crop" alt="laundry">
-          <div class="card-body">
-            <h3>👕 Laundry Made Easy</h3>
-            <p class="muted">Schedule pickups, track delivery, and choose quick-wash or economy plan.</p>
-            <div class="card-actions">
-              <button class="tag" data-type="laundry" data-title="Laundry Made Easy">Schedule Pickup</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- LAUNDRY SUMMARY -->
-<article class="card">
-<img src="https://picsum.photos/900/500?random=52" alt="Laundry Service">
-  <div class="card-body">
-    <h3>🧺 Laundry Made Easy</h3>
-    <p class="muted">Pickup, wash and delivery with flexible plans. Ideal for students who want clean clothes without the headache.</p>
-    <div class="card-actions">
-      <button class="tag" data-type="laundry" data-title="Laundry Made Easy">Schedule Pickup</button>
+    <div class="card-grid">
+  <!-- FIND YOUR STAY CARD -->
+  <div class="card">
+        <img src="https://t4.ftcdn.net/jpg/06/32/19/49/240_F_632194988_bmP71h6PQ5sN8zAlseTjYYNSo65kcwwj.jpg" alt="PG Stay">
+    <div class="card-body">
+      <h3>🏠 Find Your Stay</h3>
+      <p class="muted">Verified PGs, flats and hostels with real student reviews and transparent pricing.</p>
+      <a href="stay.html" class="tag">See Options</a>
     </div>
   </div>
-</article>
+
+  <!-- HEALTHY MEALS CARD -->
+  <div class="card">
+  <img src="images/meals1.jpg" alt="Healthy Meals">
+    <div class="card-body">
+      <h3>🍱 Healthy Meals</h3>
+      <p class="muted">Daily mess subscriptions, weekly menus and special student combos at budget prices.</p>
+      <a href="meals.html" class="tag">View Menus</a>
+    </div>
+  </div>
+
+  <!-- LAUNDRY CARD -->
+  <div class="card">
+<img src="https://as1.ftcdn.net/v2/jpg/15/59/66/88/1000_F_1559668873_ytY09RaT1aOFY57hD9tNAGva3QP1lQAw.jpg" alt="laundry image">
+    <div class="card-body">
+      <h3>🧺 Laundry</h3>
+      <p class="muted">Fast, affordable and convenient laundry services with doorstep pickup & delivery.</p>
+      <a href="laundry.html" class="tag">Schedule Pickup</a>
+    </div>
+  </div>
+</div>
+
+
+
+   
 
 
 
@@ -264,5 +246,7 @@
   </div>
 
   <script src="script.js"></script>
+<script src="services.js"></script>
+
 </body>
 </html>
