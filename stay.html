@@ -101,18 +101,29 @@
     </div>
   </div>
 
-  <script src="./script.js"></script>
-  <script src="./services.js"></script>
-  <script>
-    // initialize this page view
-    document.addEventListener('DOMContentLoaded', ()=> {
+  <!-- scripts -->
+<!-- JS Scripts (load order matters, no "./" in path) -->
+<script src="script.js"></script>
+<script src="services.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log("✅ DOM loaded, checking Services...");
+    if (typeof Services !== 'undefined' && Services.initStayPage) {
+      console.log("✅ Services.js loaded successfully!");
       Services.initStayPage({
         pgCount: 30,
         flatsCount: 25,
         containerId: 'listGrid',
         tabsSelector: '.tab'
       });
-    });
-  </script>
+    } else {
+      console.error("❌ Services.js not loaded! Check filename or path.");
+    }
+  });
+</script>
+</body>
+</html>
+
+
 </body>
 </html>
