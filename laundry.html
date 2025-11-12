@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EaseHub — Laundry</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <style>
+<link rel="stylesheet" href="./style.css">
+
+<style>
     .laundry-hero{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;}
     .laundry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px;}
     .laundry-card{background:#fff;padding:14px;border-radius:12px;box-shadow:0 14px 36px rgba(12,12,12,0.06);opacity:0;transform:translateY(18px);transition:all .45s;}
@@ -86,14 +87,30 @@
     </div>
   </div>
 
-  <script src="./script.js"></script>
-  <script src="./services.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', ()=> {
+  <!-- scripts -->
+<!-- Scripts (correct order, no './' before file names) -->
+<script src="script.js"></script>
+<script src="services.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("✅ DOM Loaded, checking Services.js...");
+
+    if (typeof Services !== "undefined" && Services.initLaundryPage) {
+      console.log("✅ Services.js loaded successfully!");
       Services.initLaundryPage({
-        containerId: 'laundryGrid'
+        containerId: "laundryGrid",
       });
-    });
-  </script>
+    } else {
+      console.error("❌ Services.js not loaded or failed to initialize!");
+    }
+  });
+</script>
+</body>
+</html>
+
+</html>
+
+
+
 </body>
 </html>
