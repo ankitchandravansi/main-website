@@ -89,14 +89,39 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
-  <script src="services.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', ()=> {
-      Services.initMealsPage({
-        containerId: 'mealGrid'
-      });
-    });
-  </script>
+  <!-- Universal script loader (works local + GitHub Pages) -->
+<script>
+  const basePath = window.location.hostname.includes("github.io")
+    ? "/main-website/"   // ✅ for GitHub Pages
+    : "./";              // ✅ for local VS Code preview
+
+  const scripts = ["script.js", "services.js"];
+
+  scripts.forEach((src) => {
+    const s = document.createElement("script");
+    s.src = basePath + src;
+    document.body.appendChild(s);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const tryInit = () => {
+      if (typeof Services !== "undefined") {
+        console.log("✅ Services loaded successfully");
+        if (location.pathname.includes("stay")) {
+          Services.initStayPage({ pgCount: 30, flatsCount: 25 });
+        } else if (location.pathname.includes("meals")) {
+          Services.initMealsPage({ containerId: "mealGrid" });
+        } else if (location.pathname.includes("laundry")) {
+          Services.initLaundryPage({ containerId: "laundryGrid" });
+        }
+      } else {
+        console.error("❌ Services not loaded yet... retrying");
+        setTimeout(tryInit, 300);
+      }
+    };
+    tryInit();
+  });
+</script>
 </body>
 </html>
+
